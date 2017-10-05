@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDom from 'react-dom';
+import Nav from './components/parcials/nav'
+
 
 ReactDom.render(
-  <div>Hello</div>,document.getElementById('root')
+  <Nav />,document.getElementById('root')
 );
