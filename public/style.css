@@ -21,3 +21,9 @@ ul#nav-list li{margin: 0 15px; font-size: 17px;}
 ul#auth-link{display:none; position: absolute; background: rgb(205, 89, 225); padding: 5px; width: 110px; right: 0; text-align: center;border-radius: 3px;}
 ul#auth-link:before{content:''; position: absolute; left: 50%; top:-7px; border-bottom: 7px solid #cc5ae1; border-left:7px solid transparent; border-right: 7px solid transparent;}
 ul#auth-link li a{ color: #fff;}
+
+/*==== Code Playground ===========*/
+
+#code-val1, #code-val2{height: 400px; resize: none;overflow: scroll;}
+#code-val1{border-top-right-radius: 0; border-bottom-right-radius: 0;}
+#code-val2{border-top-left-radius: 0; border-bottom-left-radius: 0;}
