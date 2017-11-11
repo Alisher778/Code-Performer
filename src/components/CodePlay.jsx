@@ -130,6 +130,11 @@ class CodePlayground extends Component {
         <div id="code-area" className="container">
           
           <h1 className="display-5 mt-4 text-center">Test Your Code Performance</h1>
+          <p>
+           You can compare the performance speed of your written code here. Your code is run 10 times(by default)
+           and gives you an avarage performance time to compare. Hoverev, you can increase the code run times as 
+           many times as you want.
+          </p>
           <div className="row">
             <div className="col-sm-5">
               <textarea className="form-control form-control-lg my-4" id="code-val1"></textarea>

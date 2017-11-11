@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink as Link } from 'react-router-dom';
 import avatar from '../../assets/img/avatar.png';
-
-
 
 class Nav extends Component {
   constructor(props) {
@@ -21,7 +19,7 @@ class Nav extends Component {
     return(
       <header>
         <nav>
-          <div id="logo"><Link to="/" className="text-light "><h1>Task<b>Runner</b></h1></Link></div>
+          <div id="logo"><Link to="/"><h1>Code<b>Performer</b></h1></Link></div>
           <ul id="nav-list">
             <li><Link to="/about">About</Link></li>
             <li><Link to="/code">Test Code</Link></li>

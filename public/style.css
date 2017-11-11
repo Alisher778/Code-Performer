@@ -16,12 +16,21 @@ header{
 }
 nav{display: flex; align-items: center; justify-content: space-between; color: #fff; padding: 7px;}
 #logo{margin-left: 15px; font-size: 22px;line-height: 22px; padding: 0}
+#logo a{color: #fff !important; text-decoration: none;}
+#logo a:hover{color: #fff !important; text-decoration: none;}
+#logo a h1{font-size: 32px;}
+#logo a h1 b{color: #034071;}
 ul#nav-list{display: flex; align-items: center; justify-content: space-around;margin: 0;}
 ul#nav-list li{margin: 0 15px; font-size: 17px;}
+ul#nav-list li a{color: #fff;}
+ul#nav-list li a.active{color: #000000; font-weight: 600;border-bottom: 1px solid #FF9800;background-color: #fff;padding: 27px 16px 27px;}
 ul#auth-link{display:none; position: absolute; background: rgb(205, 89, 225); padding: 5px; width: 110px; right: 0; text-align: center;border-radius: 3px;}
 ul#auth-link:before{content:''; position: absolute; left: 50%; top:-7px; border-bottom: 7px solid #cc5ae1; border-left:7px solid transparent; border-right: 7px solid transparent;}
 ul#auth-link li a{ color: #fff;}
 
+/*==== About ===========*/
+
+#about .jumbotron{background-color: #3F51B5; color:#d7d7d7;}
 /*==== Code Playground ===========*/
 
 #code-val1, #code-val2{height: 300px; resize: none;overflow: scroll;}
