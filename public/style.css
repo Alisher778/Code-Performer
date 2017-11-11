@@ -24,6 +24,6 @@ ul#auth-link li a{ color: #fff;}
 
 /*==== Code Playground ===========*/
 
-#code-val1, #code-val2{height: 400px; resize: none;overflow: scroll;}
+#code-val1, #code-val2{height: 300px; resize: none;overflow: scroll;}
 #code-val1{border-top-right-radius: 0; border-bottom-right-radius: 0;}
 #code-val2{border-top-left-radius: 0; border-bottom-left-radius: 0;}
