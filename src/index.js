@@ -11,7 +11,7 @@ ReactDom.render(
     <div>
       <Route path="/" component={ Nav } />
       <Route path="/about" component={ About } />
-      <Route path="/code" component={ CodePlayground } />
+      <Route path="/" component={ CodePlayground } />
     </div>
   </Router>
   ,document.getElementById('root')

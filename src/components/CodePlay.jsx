@@ -11,10 +11,8 @@ class CodePlayground extends Component {
  
 
   evalCode() {
-    var textarea1 = document.getElementById('code-val1').value;
-      var excuteTime1 = 0;
-      var code1Msg = '';
-      var status1 = '';
+      const textarea1 = document.getElementById('code-val1').value;
+      let excuteTime1 = 0, code1Msg = '', status1 = '', valueList = [];
       function test1(){
         if(textarea1 === ""){
           excuteTime1 = 0;
@@ -23,11 +21,10 @@ class CodePlayground extends Component {
           return
         } else{
           try {
-            var timeStart = performance.now();
+            const timeStart = performance.now();
             eval(textarea1)
-            // textarea1.slice(0, -1)
-            var timeFinish = performance.now();
-            excuteTime1 = timeFinish - timeStart;
+            const timeFinish = performance.now();
+            valueList.push(excuteTime1 = timeFinish - timeStart);
             code1Msg = "Success";
             status1 = 'success';
           }
@@ -40,28 +37,30 @@ class CodePlayground extends Component {
         }
         
       }
-      test1();
-      var perform1 = '';
-      var perform2 = '';
-      var excuteTime2 = this.state.code2.execTime;
-      if(excuteTime1 > excuteTime2){
+      for(let i = 0; i<10; i++){
+        test1();
+      } 
+
+      const avarage = (arr) => arr.reduce((total, num) => total + num, 0) / arr.length;
+      const avarageValue = avarage(valueList), excuteTime2 = this.state.code2.execTime;
+      let perform1 = '', perform2 = '';
+      if(avarageValue > excuteTime2){
         perform1 = "warning";
         perform2 = "success";
       } else {
         perform1 = "success";
         perform2 = "warning";
-      } 
-      this.setState({ code1: {showTime: excuteTime1.toPrecision(3), execTime: excuteTime1, msg: code1Msg, status: status1, perform: perform1},
+      }
+
+      this.setState({ code1: {showTime: avarageValue.toFixed(3), execTime: avarageValue, msg: code1Msg, status: status1, perform: perform1},
                       code2: { ...this.state.code2, perform: perform2},
                    });
 
   }
 
   evalCode2() {
-      var textarea2 = document.getElementById('code-val2').value;
-      var excuteTime2 = 0;
-      var code2Msg = '';
-      var status2 = '';
+      const textarea2 = document.getElementById('code-val2').value;
+      let excuteTime2 = 0, code2Msg = '', status2 = '', valueList = [];
       function test2(){
         if(textarea2 === ""){
           excuteTime2 = 0;
@@ -70,11 +69,12 @@ class CodePlayground extends Component {
           return;
         } else {
           try {
-            var timeStart = performance.now();
+            const timeStart = performance.now();
             eval(textarea2)
             // textarea2.slice(0, -1)
-            var timeFinish = performance.now();
-            excuteTime2 = timeFinish - timeStart;
+            const timeFinish = performance.now();
+            // excuteTime2 = timeFinish - timeStart;
+            valueList.push(excuteTime2 = timeFinish - timeStart)
             code2Msg = "Success";
             status2 = "success";
           }
@@ -85,12 +85,17 @@ class CodePlayground extends Component {
             }
           }
         }
-      }
-      test2();
-      var perform1 = '';
-      var perform2 = '';
-      var excuteTime1 = this.state.code1.execTime;
-      if(excuteTime1 > excuteTime2){
+      } 
+
+      for(let i = 0; i<10; i++){
+        test2();
+      }            
+      let perform1 = '', perform2 = '';
+      const excuteTime1 = this.state.code1.execTime;
+      const avarage = (arr) => arr.reduce((total, num) => total + num, 0) / arr.length;
+      const avarageValue = avarage(valueList);
+      
+      if(excuteTime1 > avarageValue){
         perform1 = "warning";
         perform2 = "success";
       } else {
@@ -100,13 +105,12 @@ class CodePlayground extends Component {
 
       this.setState({
                      code1: { ...this.state.code1, perform: perform1},
-                     code2: {showTime: excuteTime2.toPrecision(3), execTime: excuteTime2, msg: code2Msg, status: status2, perform: perform2}
+                     code2: {showTime: avarageValue.toFixed(3), execTime: avarageValue, msg: code2Msg, status: status2, perform: perform2}
                    });
 
   }
 
   render() {
-    console.log(this.state)
     return(
         <div id="code-area" className="container">
           
