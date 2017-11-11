@@ -9,9 +9,10 @@ import CodePlayground from './components/CodePlay';
 ReactDom.render(
   <Router>
     <div>
-      <Route path="/" component={ Nav } />
+      <Nav />
+      <Route exact path="/" component={ CodePlayground } />
       <Route path="/about" component={ About } />
-      <Route path="/" component={ CodePlayground } />
+      <Route path="/code" component={ CodePlayground } />
     </div>
   </Router>
   ,document.getElementById('root')
