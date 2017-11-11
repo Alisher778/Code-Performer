@@ -5,11 +5,12 @@ class CodePlayground extends Component {
   constructor(props) {
     super(props);
     this.state = { code1: {showTime: '0', execTime: '', msg: '', status: '', perform: null},
-                   code2: {showTime: '0', execTime: '', msg: '', status: '', perform: null}
+                   code2: {showTime: '0', execTime: '', msg: '', status: '', perform: null},
+                   runTimes: 10
                  }
   }
  
-
+  // Run the 1st code logic
   evalCode() {
       const textarea1 = document.getElementById('code-val1').value;
       let excuteTime1 = 0, code1Msg = '', status1 = '', valueList = [];
@@ -37,10 +38,11 @@ class CodePlayground extends Component {
         }
         
       }
-      for(let i = 0; i<10; i++){
+      let xTimes = this.state.runTimes;
+      for(let i = 0; i<xTimes; i++){
         test1();
       } 
-
+      console.log(valueList);
       const avarage = (arr) => arr.reduce((total, num) => total + num, 0) / arr.length;
       const avarageValue = avarage(valueList), excuteTime2 = this.state.code2.execTime;
       let perform1 = '', perform2 = '';
@@ -58,6 +60,7 @@ class CodePlayground extends Component {
 
   }
 
+  // Run the 2nd code logic
   evalCode2() {
       const textarea2 = document.getElementById('code-val2').value;
       let excuteTime2 = 0, code2Msg = '', status2 = '', valueList = [];
@@ -71,9 +74,7 @@ class CodePlayground extends Component {
           try {
             const timeStart = performance.now();
             eval(textarea2)
-            // textarea2.slice(0, -1)
             const timeFinish = performance.now();
-            // excuteTime2 = timeFinish - timeStart;
             valueList.push(excuteTime2 = timeFinish - timeStart)
             code2Msg = "Success";
             status2 = "success";
@@ -110,13 +111,27 @@ class CodePlayground extends Component {
 
   }
 
+  increment() {
+    if(this.state.runTimes === 2000){
+      return
+    }
+    this.setState({ runTimes: this.state.runTimes + 5 })
+    
+  }
+
+  decrement(e) {
+    if(this.state.runTimes === 5){
+      return
+    }
+    this.setState({ runTimes: this.state.runTimes - 5 })
+  }
   render() {
     return(
         <div id="code-area" className="container">
           
           <h1 className="display-5 mt-4 text-center">Test Your Code Performance</h1>
           <div className="row">
-            <div className="col-sm-6">
+            <div className="col-sm-5">
               <textarea className="form-control form-control-lg my-4" id="code-val1"></textarea>
               <ul className="list-group">
                 <li className={`list-group-item bg-${this.state.code1.perform} lead`}><b>Time: </b>{this.state.code1.showTime}s <em className="float-right">{this.state.code1.execTime}</em></li>
@@ -125,7 +140,12 @@ class CodePlayground extends Component {
               <button id="run-code" className="btn btn-success btn-lg mx-auto d-block w-50 mt-4" onClick={this.evalCode.bind(this)}>Run 1st Code</button>
 
             </div>
-            <div className="col-sm-6">
+            <div className="form-group d-flex flex-column" id="increment-wrapper">
+                <button className="btn increment" onClick={this.increment.bind(this)}>+</button>
+                  <input type="number" min="5" max="100" value={this.state.runTimes} readOnly className="form-control align-self-center d-block" id="run-times-value"/>
+                <button className="btn increment" onClick={this.decrement.bind(this)}>-</button>
+            </div>
+            <div className="col-sm-5">
               <textarea className="form-control form-control-lg my-4" id="code-val2"></textarea>
               <ul className="list-group">
                 <li className={`list-group-item bg-${this.state.code2.perform} lead`}><b>Time: </b>{this.state.code2.showTime}s <em className="float-right">{this.state.code2.execTime}</em></li>

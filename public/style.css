@@ -27,3 +27,9 @@ ul#auth-link li a{ color: #fff;}
 #code-val1, #code-val2{height: 300px; resize: none;overflow: scroll;}
 #code-val1{border-top-right-radius: 0; border-bottom-right-radius: 0;}
 #code-val2{border-top-left-radius: 0; border-bottom-left-radius: 0;}
+.increment{cursor: pointer; text-align: center;font-weight: 900; font-size: 1.5rem;background-color: #ffc107;border-radius: 0;padding: 0;outline: none;}
+.increment:focus{outline: none;box-shadow: none;}
+.increment:first-child{border-top-right-radius: 3px; border-top-left-radius: 3px}
+.increment:last-child{border-bottom-right-radius: 3px; border-bottom-left-radius: 3px}
+#increment-wrapper{height: 350px; justify-content: center;}
+#run-times-value{background: #fff;text-align: center;border-radius: 0;font-size: 20px;}
