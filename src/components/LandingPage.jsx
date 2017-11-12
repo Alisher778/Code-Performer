@@ -5,15 +5,15 @@ const LandingPage = () => {
   return(
     <div id="landing-page" className="container">
       <div className="row align-items-center">
-        <div className="col-sm-7">
+        <div className="col-md-6 col-lg-7">
         <img src={img} alt="" />
       </div>
-      <div className="col-sm-5 text-center">
-        <h1>Aliquip reprehenderit amet.</h1>
+      <div className="col-md-6 col-lg-5 text-center">
+        <h1 className="font-weight-bold">Simple Yet Useful Tool</h1>
         <p className="lead">
-          Ex dolore in sed nulla proident magna eu exercitation amet pariatur aute non et consequat deserunt quis excepteur qui et dolor dolor consequat ut in eiusmod in.
+          Are you curiouse about your code performance? Within seconds you will know weather your code is running efficiently or not. Code Performer is Developers' best friend.
         </p>
-        <div className="btn btn-success btn-lg">Run Code</div>
+        <a href="/code-performance" className="btn btn-lg" id="landing-btn">Test Your Code</a>
       </div>
       </div>
     </div>

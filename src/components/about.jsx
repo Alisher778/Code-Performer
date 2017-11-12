@@ -8,7 +8,7 @@ const About = () => {
         <div className="jumbotron mt-5 text-center container">
           <h1 className="display-4 text-center">About Code Performer</h1>
           <p className="lead w-75 mx-auto">If you want to know wheather your some certine code is running slower here you have a chance to run your code and find out how fast your can be.</p>
-          <Link to="/" className="btn btn-lg btn-danger">Run Your Code</Link>
+          <Link to="/code-performance" className="btn btn-lg btn-danger">Run Your Code</Link>
         </div>
         <p className="lead">
           Hi, thank you for using Code Performer! I came up with the code permormance app in August, 2017. I was working on a big project and preparing video tutorilas to teach basic web development techniques.  

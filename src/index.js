@@ -14,7 +14,7 @@ ReactDom.render(
       <Nav />
       <Route exact path="/" component={ LandingPage } />
       <Route path="/about" component={ About } />
-      <Route path="/code" component={ CodePlayground } />
+      <Route path="/code-performance" component={ CodePlayground } />
       <Footer />
     </div>
   </Router>

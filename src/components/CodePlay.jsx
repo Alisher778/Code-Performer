@@ -130,13 +130,16 @@ class CodePlayground extends Component {
       <div className="conatiner-fluid bg-light py-5">
         <div id="code-area" className="container pb-5">
           <h1 className="display-5 mt-4 text-center">Test Your Code Performance</h1>
-          <p>
-           You can compare the performance speed of your written code here. Your code is run 10 times(by default)
-           and gives you an avarage performance time to compare. Hoverev, you can increase the code run times as 
-           many times as you want.
+          <p className="lead text-center">
+            Your code is run 10 times(by default) and gives you an avarage performance time to compare.
           </p>
+          <div className="form-group" id="increment-wrapper">
+            <button className="btn increment" onClick={this.increment.bind(this)}>+</button>
+              <input type="number" min="5" max="100" value={this.state.runTimes} readOnly className="form-control" id="run-times-value"/>
+            <button className="btn increment" onClick={this.decrement.bind(this)}>-</button>
+          </div>
           <div className="row">
-            <div className="col-sm-5">
+            <div className="col-md-6">
               <textarea className="form-control form-control-lg my-4" id="code-val1"></textarea>
               <ul className="list-group">
                 <li className={`list-group-item bg-${this.state.code1.perform} lead`}><b>Time: </b>{this.state.code1.showTime}s <em className="float-right">{this.state.code1.execTime}</em></li>
@@ -145,12 +148,8 @@ class CodePlayground extends Component {
               <button id="run-code" className="btn btn-success btn-lg mx-auto d-block w-50 mt-4" onClick={this.evalCode.bind(this)}>Run 1st Code</button>
 
             </div>
-            <div className="form-group d-flex flex-column" id="increment-wrapper">
-                <button className="btn increment" onClick={this.increment.bind(this)}>+</button>
-                  <input type="number" min="5" max="100" value={this.state.runTimes} readOnly className="form-control align-self-center d-block" id="run-times-value"/>
-                <button className="btn increment" onClick={this.decrement.bind(this)}>-</button>
-            </div>
-            <div className="col-sm-5">
+            
+            <div className="col-md-6">
               <textarea className="form-control form-control-lg my-4" id="code-val2"></textarea>
               <ul className="list-group">
                 <li className={`list-group-item bg-${this.state.code2.perform} lead`}><b>Time: </b>{this.state.code2.showTime}s <em className="float-right">{this.state.code2.execTime}</em></li>
