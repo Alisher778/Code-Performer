@@ -5,13 +5,14 @@ import Nav from './components/parcials/nav';
 import Footer from './components/parcials/footer';
 import About from './components/about';
 import CodePlayground from './components/CodePlay';
+import LandingPage from './components/LandingPage';
 
 
 ReactDom.render(
   <Router>
     <div>
       <Nav />
-      <Route exact path="/" component={ CodePlayground } />
+      <Route exact path="/" component={ LandingPage } />
       <Route path="/about" component={ About } />
       <Route path="/code" component={ CodePlayground } />
       <Footer />

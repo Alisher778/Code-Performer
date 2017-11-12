@@ -17,7 +17,7 @@ class Nav extends Component {
 
   render(){
     return(
-      <header>
+      <header id="header">
         <nav>
           <div id="logo"><Link to="/"><h1>Code<b>Performer</b></h1></Link></div>
           <ul id="nav-list">

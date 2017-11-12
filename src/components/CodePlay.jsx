@@ -127,8 +127,8 @@ class CodePlayground extends Component {
   }
   render() {
     return(
-        <div id="code-area" className="container">
-          
+      <div className="conatiner-fluid bg-light py-5">
+        <div id="code-area" className="container pb-5">
           <h1 className="display-5 mt-4 text-center">Test Your Code Performance</h1>
           <p>
            You can compare the performance speed of your written code here. Your code is run 10 times(by default)
@@ -160,9 +160,8 @@ class CodePlayground extends Component {
 
             </div>
           </div>
-
-
         </div>
+      </div>
     )
   }
 } 
