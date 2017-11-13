@@ -27,7 +27,7 @@ ul#nav-list li a.active{color: #000000; font-weight: 600;border-bottom: 1px soli
 ul#auth-link{display:none; position: absolute; background: rgb(205, 89, 225); padding: 5px; width: 110px; right: 0; text-align: center;border-radius: 3px;}
 ul#auth-link:before{content:''; position: absolute; left: 50%; top:-7px; border-bottom: 7px solid #cc5ae1; border-left:7px solid transparent; border-right: 7px solid transparent;}
 ul#auth-link li a{ color: #fff;}
-
+ul#nav-list li#user-auth a.active{background-color: transparent;border-bottom: none;}
 /*==== Landing Page ===========*/
 
 /*#landing-page{background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);}*/
@@ -35,6 +35,8 @@ ul#auth-link li a{ color: #fff;}
 #landing-btn{background-color: #3F51B5;color:#fff;padding: 8px 25px;font-size: 24px;}
 
 /*==== About ===========*/
+/*==== Author Page ===========*/
+#social-link a i{font-size: 24px;}
 
 #about .jumbotron{background-color: #3F51B5; color:#d7d7d7;}
 /*==== Code Playground ===========*/

@@ -18,7 +18,6 @@ class Nav extends Component {
   render(){
     return(
       <header id="header">
-        
         <nav className="navbar navbar-expand-lg navbar-light bg-none">
         <Link className="navbar-brand" id="logo" to="/"><h1>Code<b>Performer</b></h1></Link>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -29,7 +28,9 @@ class Nav extends Component {
             <li><Link to="/about">About</Link></li>
             <li><Link to="/code-performance">Test Code</Link></li>
             <li id="user-auth">
-              <img src={avatar} alt="user-auth" />
+              <Link to="/author">
+                <img src={avatar} alt="user-auth" />
+              </Link>
             </li>
           </ul>
         </div>
