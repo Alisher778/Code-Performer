@@ -28,16 +28,25 @@ ul#auth-link{display:none; position: absolute; background: rgb(205, 89, 225); pa
 ul#auth-link:before{content:''; position: absolute; left: 50%; top:-7px; border-bottom: 7px solid #cc5ae1; border-left:7px solid transparent; border-right: 7px solid transparent;}
 ul#auth-link li a{ color: #fff;}
 ul#nav-list li#user-auth a.active{background-color: transparent;border-bottom: none;}
+button#nav-btn{height: 47px;width: 60px;position: relative;transition: 0.3s;}
+.icon{width: 35px;height: 3px;margin: 7px auto;background-color: #fff;}
+.rotate>#div1{transform: rotate(45deg);transform-origin: 0;transition: 0.3s;position: absolute;top:2px;left:17px;}
+.rotate>#div2{display: none;transition: 0.3s}
+.rotate>#div3{transform: rotate(-45deg);transform-origin: 0;transition: 0.3s;position: absolute;bottom:2px;left:17px;}
 /*==== Landing Page ===========*/
 
 /*#landing-page{background-image: linear-gradient( 135deg, #CE9FFC 10%, #7367F0 100%);}*/
 #landing-page img{width: 100%; max-width: 700px;}
 #landing-btn{background-color: #3F51B5;color:#fff;padding: 8px 25px;font-size: 24px;}
 
-/*==== About ===========*/
-/*==== Author Page ===========*/
-#social-link a i{font-size: 24px;}
 
+/*==== Author Page ===========*/
+#author{padding: 70px 0; background-color: #fff;}
+#author .lead {text-align: left;}
+#author blockquote{border-left: 7px solid #dcdcdc; padding: 10px 20px 10px;background-color: #f6f6f6;font-size: 17px;}
+#author blockquote p{font-weight: bold;}
+#social-link a i{font-size: 24px;}
+/*==== About Page ===========*/
 #about .jumbotron{background-color: #3F51B5; color:#d7d7d7;}
 /*==== Code Playground ===========*/
 
@@ -58,7 +67,13 @@ footer a{color:#071a85;text-decoration: underline;}
 
 @media only screen and (max-width : 991px) {
   #landing-page h1{font-size: 35px;}
-  
+  ul#nav-list li a.active{background-color: transparent;padding: 0;border-bottom: none;}
+  .navbar-light .navbar-toggler{border-color: rgb(0, 63, 114);}
+}
+
+
+@media only screen and (max-width : 768px) {
+  #author-image{order:1;margin-top: 50px;}
 }    
 
 

@@ -20,8 +20,10 @@ class Nav extends Component {
       <header id="header">
         <nav className="navbar navbar-expand-lg navbar-light bg-none">
         <Link className="navbar-brand" id="logo" to="/"><h1>Code<b>Performer</b></h1></Link>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="navbar-toggler-icon"></span>
+        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation" id="nav-btn">
+          <div className="icon" id="div1"></div>
+          <div className="icon" id="div2"></div>
+          <div className="icon" id="div3"></div>
         </button>
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <ul className="navbar-nav ml-auto" id="nav-list">

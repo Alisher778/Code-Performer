@@ -115,15 +115,15 @@ class CodePlayground extends Component {
     if(this.state.runTimes === 2000){
       return
     }
-    this.setState({ runTimes: this.state.runTimes + 5 })
+    this.setState({ runTimes: this.state.runTimes + 10 })
     
   }
 
   decrement(e) {
-    if(this.state.runTimes === 5){
+    if(this.state.runTimes === 10){
       return
     }
-    this.setState({ runTimes: this.state.runTimes - 5 })
+    this.setState({ runTimes: this.state.runTimes - 10 })
   }
   render() {
     return(

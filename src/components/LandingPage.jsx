@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import img from '../assets/img/man.png';
 
 const LandingPage = () => {
@@ -13,7 +14,7 @@ const LandingPage = () => {
         <p className="lead">
           Are you curiouse about your code performance? Within seconds you will know weather your code is running efficiently or not. Code Performer is Developers' best friend.
         </p>
-        <a href="/code-performance" className="btn btn-lg" id="landing-btn">Test Your Code</a>
+        <Link to="/code-performance" className="btn btn-lg" id="landing-btn">Test Your Code</Link>
       </div>
       </div>
     </div>
