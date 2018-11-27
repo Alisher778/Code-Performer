@@ -1,6 +1,6 @@
 {
   "main.js": "static/js/main.6a8a6768.js",
   "main.js.map": "static/js/main.6a8a6768.js.map",
-  "static/media/man.png": "static/media/man.4bb5a34d.png",
-  "static/media/me.jpg": "static/media/me.54b38d3c.jpg"
+  "static/media/man.png": "./static/media/man.4bb5a34d.png",
+  "static/media/me.jpg": "./static/media/me.54b38d3c.jpg"
 }
