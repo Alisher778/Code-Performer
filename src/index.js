@@ -10,7 +10,7 @@ import LandingPage from './components/LandingPage';
 
 
 ReactDom.render(
-  <Router basename="https://alisher778.github.io/Code-Performer">
+  <Router basename="/Code-Performer">
     <div>
       <Nav />
       <Route exact path="/" component={ LandingPage } />
