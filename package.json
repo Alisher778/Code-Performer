@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "devDependencies": {
+    "gh-pages": "^2.0.1",
     "react-scripts": "1.0.14"
   },
   "dependencies": {
@@ -16,5 +17,5 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
   },
-  "homepage":"https://alisher778.github.io/Code-Performer/"
+  "homepage": "https://alisher778.github.io/Code-Performer/"
 }
