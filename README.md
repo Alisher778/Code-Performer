@@ -1,4 +1,4 @@
-<h3><a href="http://thecodeperformer.com">The Code Performer</a></h3>
+<h3><a href="https://alisher778.github.io/Code-Performer/">The Code Performer</a></h3>
 <p>
   Hi, thank you for using Code Performer! I came up with the code performance app in August, 2017. I was working on a big project and preparing video tutorials to teach basic web development techniques.
 </p>
