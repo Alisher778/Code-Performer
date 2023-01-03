@@ -4,7 +4,7 @@
     "private": true,
     "author": "Alisher Musurmonov",
     "devDependencies": {
-        "react-scripts": "1.0.14"
+        "react-scripts": "5.0.1"
     },
     "dependencies": {
         "react": "^16.0.0",
